@@ -1,0 +1,74 @@
+<body>
+  <br>
+  <div class="search-container">
+    <label for="searchInput">Search: </label>
+    <input type="text" id="searchInput" [(ngModel)]="searchKeyword" />
+    <button class="btn btn-primary" (click)="searchCours()">
+      <i class="fa fa-search"></i> Search
+    </button>
+  </div>
+  <br><br>
+  <div class="container">
+    <h2 class="text-center">Parcourez nos offres de formation</h2>
+    <br>
+    <br>
+    <div class="row">
+      <div *ngFor="let cour of (searchResults.length ? searchResults : cours)" class="col-md-4">
+        <div class="card mb-4">
+          <img [src]="cour.imageSrc" class="card-img-top" alt="Image du cours" width="300" height="200">
+          <div class="card-body">
+            <h5 class="card-title">Nom du cours:</h5>
+            <p>{{ cour.nomDuCours }}</p>
+            <h5 class="card-text">Description:</h5>
+            {{ cour.description }}
+            <div class="text-center">
+              <button class="btn b" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="showDetails(cour)">
+                Details <i class="fas fa-info-circle"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <button type="button " class="btn btn-primary d" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> <i class="fa-solid fa-comment"></i> Commenter</button>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-detailscours [selectedCourse]="selectedCourse" class="details-section"></app-detailscours>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+          <!-- Exemple dans le modèle -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Commentaire<i class="fa fa-comment"></i></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <form >
+        <textarea  class="form-control" [(ngModel)]="comForm.commentaire" name="com" id="com" cols="30" rows="10"></textarea>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="ajoutercom()">Ajouter</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

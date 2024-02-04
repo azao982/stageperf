@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif;}
+
+.sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 80px; /* Ajustez la largeur de votre logo selon vos besoins */
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+p{
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar" style="width:200px;right:0"  id="mySidenav" >
+  <div class="logo" style="display: inline-block; vertical-align: middle;">
+    <img src="assets/th.jpg" height="70" width="70" alt="Avatar" class="avatar">
+   
+   </div>
+   <div style="display: inline-block; vertical-align: middle;">
+    <button class="w3-bar-item w3-button w3-hide-large t"
+    onclick="closeNav()"><i class="fa-solid fa-xmark"></i></button><br>
+  </div>
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {font-family: Arial, Helvetica, sans-serif;}
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+   background-color: #fff;  
+    color:gray;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #bbbaba;
+    color: black;
+    font-weight: bold;
+    border-radius: 40px;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+    margin-left: 120px;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 30%;
+    margin-left: 1px;
+    margin-right: 50px;
+  }
+  
+  .container {
+    padding: 5px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+ 
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #dddddd;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #080808;
+    width: 65%;
+
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  </style>
+  </head>
+  <body class="bh">
+  
+  <h2></h2>
+  
+  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa-solid fa-arrow-right-to-bracket i"></i></button>
+  <div id="id01" class="modal">
+    
+    <form class="modal-content animate" action="/action_page.php" method="post">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="assets/jo.jpg" style="border-radius:100%;" height="290" width="10" alt="Avatar" class="avatar">
+      </div>
+      <div class="container x">
+      <div class="row justify-content-left">
+        <div class="col-md-6">
+          <div class="card custom-bg-color text-black">
+            <div class="card-body">
+              <div *ngIf="errorMessage" class="error-message">
+                {{ errorMessage }}
+              </div> 
+              <form [formGroup]="loginForm">
+                <div class="form-group text-center">
+                  <label for="emailId" class="font-weight-bold b" ><i class="fas fa-user "></i> Adresse email :</label>
+                  <br><br>
+                  <!-- ... -->
+                  
+    <input type="email" class="form-control" id="emailId" placeholder="Entrez votre adresse mail" formControlName="emailId">
+    <br>
+    <div *ngIf="loginForm.get('emailId').invalid && (loginForm.get('emailId').dirty || loginForm.get('emailId').touched)" class="error-message">
+      {{ getErrorMessage('emailId') }}
+    </div>
+    <!-- ... -->
+    <label for="password" class="font-weight-bold k"><i class="fa fa-key" aria-hidden="true"></i> Password :</label>
+    <br><br>
+    <input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe" formControlName="password">
+    <div *ngIf="loginForm.get('password').invalid && (loginForm.get('password').dirty || loginForm.get('password').touched)" class="error-message">
+      {{ getErrorMessage('password') }}
+    </div>
+    <!-- ... -->
+                </div>
+                <br>
+                <br>
+                <div class="form-group text-center e">
+                  <button type="button" (click)="onLogin()" class="btn btn-dark" [disabled]="loginForm.invalid">
+                    <i class="fas fa-sign-in-alt"></i> Se connecter
+                  </button>
+                </div>
+                <br>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      </div>
+    </form>
+  </div>
+  
+  <script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+  
+  </body>
+  </html>
+    <a href="#home"><i class="fa fa-fw fa-home"></i></a>
+  <a href="/apropos"><i class="fa fa-fw fa-wrench"></i></a>
+  <a href="/footer"><i class="fa fa-fw fa-envelope"></i></a>
+  <a href="#home"><i class="fas fa-sign-out-alt"></i></a>
+</div>
+<div class="ya" style="width:10px;right:0" id="mySidebar">
+  <!-- <button class="w3-bar-item w3-button w3-hide-large t" -->
+  <!-- onclick="w3_close()"><i class="fa-solid fa-xmark"></i></button> -->
+</div> 
+
+<div class="w3-main" style="margin-right:200px">
+<div class="w3-teal">
+  <h1 class="text-center u"><i>CNIFormation</i></h1>
+
+
+  <button class="w3-button w3-teal w3-xlarge w3-right w3-hide-large ya" onclick="openNav()">&#9776;</button>
+</div>
+</div>
+</body>
+</html>

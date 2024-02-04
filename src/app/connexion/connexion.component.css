@@ -1,0 +1,27 @@
+.xa{
+  margin-left: 170px;
+}
+.custom-bg-color {
+    background-color: #bdcfe7;
+  }  
+  .error-message {
+    color: red; 
+    margin-top: 10px;
+  }
+  body {
+    background-image: url('/assets/art.jpg');
+    background-size: cover;
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  .b{
+    margin-right:380px;
+  }
+  .k{
+    margin-right:410px;
+  }
+  label{
+    font-weight: bold;
+  }

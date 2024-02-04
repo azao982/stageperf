@@ -1,0 +1,42 @@
+<!-- Votre liste de cours existante -->
+<body><br>
+<br><br>
+<div class="container">
+  <h2 class="text-center" style="color:black">Liste des utilisateurs</h2>
+  <br>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered mx-auto">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" style="text-align: center;">EmailId</th>
+          <th scope="col" style="text-align: center;">UserName</th>
+          <!-- <th scope="col" style="text-align: center;">password</th> -->
+          <th scope="col" style="text-align: center;">Rôle</th>
+          <th scope="col" style="text-align: center;">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of user" >
+          <ng-container *ngIf="item.role !== 'admin'">
+          <td>{{ item.emailId }}</td>
+          <td>{{ item.userName }}</td>
+          <!-- <td>{{ item.password }}</td> -->
+          <td>{{ item.role }}</td>
+          <td>
+          <div class="text-center">
+            <button class="btn btn-default mx-2 yx" (click)="redirigerVersPageModifier(item.id) ">
+                Modifier<i class="fas fa-edit"></i>
+               </button>
+               <!-- Ajouter le bouton "Supprimer" -->
+               <button class="btn btn-default yl" (click)="supprimeruser(item.id)">
+                 Supprimer<i class="fas fa-trash"></i>
+             </button>
+          </div>
+        </td>
+      </ng-container>
+        </tr></tbody></table></div></div>
+        <button class="btn btn-default aa" (click)="retoura()">
+            <i class="fas fa-share"></i>
+        </button>
+       
+    </body>

@@ -1,0 +1,31 @@
+h1{
+    text-align: center;
+}
+input{
+    color: brown;
+}
+label{
+    color:black;
+    font-weight: bold;
+    font-size: 20px;
+}
+body {
+    background-image: url('/assets/app.jpg');
+    background-size: cover;
+    height: 125vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }  
+  .x{
+    padding: 10px 10px;
+    margin-right: 1px;
+  }
+  button {
+    padding: 10px 20px;
+    background-color:black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

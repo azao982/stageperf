@@ -1,0 +1,25 @@
+.xb{
+    margin-left:180px;
+}
+/* styles.css (ou styles.scss) */
+.custom-bg-color {
+    background-color: #bdcfe7; /* Couleur de fond souhaitée */
+  }
+  body {
+    background-image: url('/assets/saf.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  }
+ .container{
+    margin-left:60px;
+ }
+ label{
+  font-weight: bold;
+ }
+ .error-message {
+  color: red; 
+  margin-top: 10px;
+}

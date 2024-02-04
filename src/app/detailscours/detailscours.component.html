@@ -1,0 +1,12 @@
+<div *ngIf="selectedCourse" class="d-flex justify-content-center align-items-center" style="height: 50vh;">
+  <div>
+      <h4 style="color:rgb(48, 47, 47);"><i class="fas fa-info-circle"></i> Détails d'une formation</h4>
+      <br>
+      <!-- <p><b><i class="fas fa-id-card"></i> Id</b>: {{ selectedCourse.id }}</p>!-->
+      <p><b><i class="fas fa-file-pdf"></i> Nom du formation</b>: {{ selectedCourse.nomDuCours }}</p>
+      <p><b><i class="fas fa-file-pdf"></i> Description</b>: {{ selectedCourse.description }}</p>
+      <p><b><i class="fas fa-file-pdf"></i> Cours Format PDF</b>:<a *ngIf="selectedCourse.coursFormatPdf" [href]="selectedCourse.coursFormatPdf"target="_blank">Voir PDF</a><span *ngIf="!selectedCourse.coursFormatPdf">N/A</span></p>
+      <p><b><i class="fas fa-video"></i> Cours Format Vidéo</b>:<a *ngIf="selectedCourse.coursFormatVideo" [href]="selectedCourse.coursFormatVideo" target="_blank">Voir Vidéo</a><span *ngIf="!selectedCourse.coursFormatVideo">N/A</span></p>
+      <p><b><i class="fas fa-user"></i> Nom du Professeur</b>:{{ selectedCourse.nomProfesseur}}</p>
+  </div>
+</div>

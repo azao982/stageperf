@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un cours</title>
+    <!-- Inclure les fichiers CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <br>
+    <div class="container">
+        <h1 class="my-4 " style="color:black">Ajouter une formation</h1>
+        <form [formGroup]="coursForm" (ngSubmit)="onAjouter()" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nomCours">Titre:</label>
+                <input type="text" class="form-control" placeholder="Entrez le nom du cours" formControlName='nomDuCours'>
+            </div>
+            <div class="form-group">
+                <label for="description">Description :</label>
+                <textarea class="form-control" id="description" rows="3" placeholder="Entrez la description du cours"
+                    formControlName="description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="professeur">Professeur :</label>
+                <input type="text" class="form-control" id="professeur" placeholder="Entrez le nom du professeur"
+                    formControlName="nomProfesseur">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="imageSrc">Image:</label>
+                <input type="text" class="form-control" id="imageSrc" placeholder="Entrez l'URL de l'image" formControlName='imageSrc'>
+            </div>
+            <div class="form-group">
+                <label for="coursPDF">Cours au format PDF :</label>
+                <input type="file" class="form-control-file" id="coursPDF" accept=".pdf" formControlName="coursFormatPdf">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="coursVideo">Cours au format vidéo :</label>
+                <input type="file" class="form-control-file" id="coursVideo" accept=".mp4, .avi, .mkv"
+                    formControlName="coursFormatVideo">
+            </div>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-dark x"><i class="fa fa-plus-circle"></i>Ajouter</button>
+                <button type="button" (click)="retour()" class="btn btn-dark"><i class="fa fa-reply"></i> Retour</button>
+            </div>
+        </form>
+    </div>
+    <!-- Inclure les fichiers JavaScript de Bootstrap (jQuery et Popper.js sont requis) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

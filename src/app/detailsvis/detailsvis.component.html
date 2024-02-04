@@ -1,0 +1,64 @@
+    <div *ngIf="selectedCourse1" class="d-flex justify-content-center align-items-center" style="height: 50vh;">
+    <div>
+        <br>
+        <br>
+        <br><br><br>
+        <br><br>
+        <br><br>
+        <br>
+        <p><b><i class="fas fa-file-pdf"></i> Nom du formation</b>: {{ selectedCourse1.nomDuCours }}</p>
+        <form [formGroup]="registForm">
+            <label for="nom" class="font-weight-bold"><i class="fas fa-user-circle"></i> Nom:</label>
+            <br>
+            <div class="mx-auto" style="width: fit-content;">
+              <input type="text" class="form-control" id="nom" placeholder="Entrez votre nom" formControlName="nom">
+              <div *ngIf="registForm.get('nom').touched && registForm.get('nom').invalid" class="error-message">
+                {{ getErrorMessage('nom') }}
+              </div>
+                    <label for="prenom" class="font-weight-bold"><i class="fas fa-user-circle"></i> Prénom:</label>
+                    <br><br>
+                    <div class="mx-auto" style="width: fit-content;">
+                      <input type="text" class="form-control" id="prenom" placeholder="Entrez votre prénom" formControlName="prenom">
+                      <div *ngIf="registForm.get('prenom').touched && registForm.get('prenom').invalid" class="error-message">
+                        {{ getErrorMessage('prenom') }}
+                      </div>
+                      <label for="emailId" class="font-weight-bold"><i class="fas fa-user"></i> Adresse email :</label>
+                  <br><br>
+                  <div class="mx-auto" style="width: fit-content;">
+                    <input type="email" class="form-control" id="emailId" placeholder="Entrez votre email" formControlName="emailId">
+                    <div *ngIf="registForm.get('emailId').touched && registForm.get('emailId').invalid" class="error-message">
+                      {{ getErrorMessage('emailId') }}
+                    </div>
+                    <label for="adresse" class="font-weight-bold"><i class="fas fa-user-circle"></i> Adresse:</label>
+                    <br><br>
+                    <div class="mx-auto" style="width: fit-content;">
+                      <input type="text" class="form-control" id="adresse" placeholder="Entrez votre adresse" formControlName="adresse">
+                      <div *ngIf="registForm.get('adresse').touched && registForm.get('adresse').invalid" class="error-message">
+                        {{ getErrorMessage('adresse') }}
+                      </div>
+                      <label for="numtel" class="font-weight-bold"><i class="fas fa-user-circle"></i> NumTel:</label>
+                  <br><br>
+                  <div class="mx-auto" style="width: fit-content;">
+                    <input type="text" class="form-control" id="numtel" placeholder="Entrez votre numéro de téléphone" formControlName="numtel">
+                    <div *ngIf="registForm.get('numtel').touched && registForm.get('numtel').invalid" class="error-message">
+                      {{ getErrorMessage('numtel') }}
+                    </div>
+                    <label for="date" class="font-weight-bold"><i class="fas fa-lock"></i> Date d'inscription:</label>
+                    <br><br>
+                    <div class="mx-auto" style="width: fit-content;">
+                      <input type="date" class="form-control" id="date" formControlName="date">
+                      <br>
+                      <div *ngIf="registForm.get('date').touched && registForm.get('date').invalid" class="error-message">
+                        {{ getErrorMessage('date') }}
+                      </div>
+                      <button type="button" (click)="regist()" class="btn btn-dark" [disabled]="registForm.invalid">
+                        <i class="fas fa-user-plus"></i> S'inscrire
+                      </button>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      </form>
+   

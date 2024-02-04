@@ -1,0 +1,26 @@
+<body><form (ngSubmit)="onUpdate()">
+    <br>
+    <h1>Modifier l'utilisateur</h1>
+    <label for="emailId">emailId</label>
+    <input type="email" id="emailId" class="form-control" name="emailId" [(ngModel)]="personne.emailId" required>
+    <br><br>
+    <label for="userName">userName</label>
+    <input type="text" id="userName" name="userName" [(ngModel)]="personne.userName" required>
+    <br><br>
+    <label for="password">password</label>
+    <input type="password" id="password" name="password" class="form-control" [(ngModel)]="personne.password" required>
+    <br><br>
+    <label for="role">Role</label>
+    <br>
+    <input type="radio" id="role" value="enseignant" name="role"[(ngModel)]="personne.role" required>Enseignant
+    <input type="radio" id="role" name="role" value="etudiant"[(ngModel)]="personne.role" required>Etudiant
+    <br><br>
+    <div class="mt-6 yax">
+      <button type="submit" class="btn btn-primary x"><i class="fas fa-edit"></i> Modifier</button>
+      <button type="button" (click)="retour()" class="btn btn-primary"><i class="fa fa-reply"></i> Retour</button>
+  </div></form>
+  <!-- Inclure les fichiers JavaScript de Bootstrap (jQuery et Popper.js sont requis) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

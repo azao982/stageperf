@@ -1,0 +1,67 @@
+
+.btn{
+    background-color:rgb(150, 147, 147);
+    border-radius: 30%;
+  }
+  .btn-secondary1{
+    color: black;
+  }
+  .search-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  #searchInput {
+    margin-right: 10px; /* Ajustez la valeur de la marge selon vos besoins */
+  }
+  .btn{
+    color: #0f2641;
+    font-weight: 600;
+  }
+  .modal-body{
+    background-color: #c6c7c9;
+  }
+  .yl:hover{
+    background-color :rgb(197, 60, 60);
+  }
+  .yx:hover{
+    background-color: rgb(151, 187, 22);
+  }
+  .vv:hover{
+    background-color: rgb(124, 124, 129);
+  }
+  .b:hover{
+    background-color: rgb(90, 91, 92);
+  }
+  h2{
+    font-weight: bold;
+    color: black;
+    background-color: rgb(168, 168, 168);
+  }
+  h5{
+    font-weight: bold;
+    color: rgb(94, 92, 92);
+  }
+  .card {
+    transition: transform 0.3s ease-in-out; /* Ajout de transition pour un effet en douceur */
+  }
+  .card:hover {
+    transform: scale(1.15); /* Modifiez cette valeur selon vos préférences */
+  }
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .btn {
+    margin-right:1px; /* Adjust the value as needed */
+  }
+  .b{
+    font-weight: bold;
+    color:black
+  }
+  .l{
+    height:650px;
+  }
+  .k{
+    font-weight: bold;
+  }

@@ -1,0 +1,60 @@
+<body>
+  <div class="container">
+    <br>
+  <h1 class="my-4 xa" style="color: black;">Connexion</h1>
+  <br>
+  <div class="row justify-content-left">
+    <div class="col-md-6">
+      <div class="card custom-bg-color text-black">
+        <div class="card-body">
+          <div *ngIf="errorMessage" class="error-message">
+            {{ errorMessage }}
+          </div> 
+          <form [formGroup]="loginForm">
+            <div class="form-group text-center">
+              <label for="emailId" class="font-weight-bold b" ><i class="fas fa-user "></i> Adresse email :</label>
+              <br><br>
+              <!-- ... -->
+              
+<input type="email" class="form-control" id="emailId" placeholder="Entrez votre adresse mail" formControlName="emailId">
+<br>
+<div *ngIf="loginForm.get('emailId').invalid && (loginForm.get('emailId').dirty || loginForm.get('emailId').touched)" class="error-message">
+  {{ getErrorMessage('emailId') }}
+</div>
+<!-- ... -->
+<label for="password" class="font-weight-bold k"><i class="fa fa-key" aria-hidden="true"></i> Password :</label>
+<br><br>
+<input type="password" class="form-control" id="password" placeholder="Entrez votre mot de passe" formControlName="password">
+<div *ngIf="loginForm.get('password').invalid && (loginForm.get('password').dirty || loginForm.get('password').touched)" class="error-message">
+  {{ getErrorMessage('password') }}
+</div>
+<!-- ... -->
+
+            </div>
+            <br>
+           <!-- <div class="form-group text-center">
+              <label for="role" class="font-weight-bold"><i class="fas fa-users"></i> Rôle :</label>
+              <br><br>
+              <div class="mx-auto" style="width: fit-content;">
+                <label class="radio-inline">
+                  <input type="radio" formControlName="role" value="etudiant"> Étudiant
+                </label>
+                 <label class="radio-inline">
+                  <input type="radio" formControlName="role" value="enseignant"> Enseignant
+                </label>
+              </div>
+            </div> -->
+            <br>
+            <div class="form-group text-center">
+              <button type="button" (click)="onLogin()" class="btn btn-dark" [disabled]="loginForm.invalid">
+                <i class="fas fa-sign-in-alt"></i> Se connecter
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
